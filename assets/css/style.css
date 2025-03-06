@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'eight-bitIn';
+  src: local(eight-bitIn), url(../ttf/8-bit-Arcade-In.ttf);
+}
+
+@font-face {
+  font-family: 'eight-bitOut';
+  src: local(eight-bitOut), url(../ttf/8-bit-Arcade-Out.ttf);
+}
+
+@font-face {
+  font-family: 'minecraft';
+  src: local(minecraft), url(../ttf/Minecraft.ttf);
+}
+
+@font-face {
+  font-family: 'super-Mario-Bros';
+  src: local(super-Mario-Bros), url(../ttf/Super-Mario-Bros.-2.ttf);
+}
+
+body,figure,img,div,header,nav,main,ul,li,a,p,section,article,h1,h2,footer{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+  font-family: 'eight-bitIn';
+  font-size: 40px;
+  text-align: center;
+}
+
+.jogoEspaco {
+  padding: 2px 2px;
+  text-align: center;
+}
+
+@media screen and (min-width: 991px){
+  .jogoEspaco {
+  padding: 50px 50px;
+  text-align: center;
+  }
+}

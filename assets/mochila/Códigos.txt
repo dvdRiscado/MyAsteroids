@@ -1,0 +1,15 @@
+50 - 150
+50 - 100
+50 - 75
+
+75 - 175
+75 - 150
+75 - 125
+
+
+
+this.arrayMeteorGra.push(grande);
+    grande.angle += random(0, 360);
+    grande.velocity = random(75, 125);
+    grande.setCircle(80);
+    this.physics.velocityFromRotation(grande.rotation, grande.velocity, grande.body.velocity);

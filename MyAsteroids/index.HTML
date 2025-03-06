@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="./assets/js/phaser.js"></script>
+    <script src="./assets/js/phaser.min.js"></script>
+
+    <title>MyAsteroids</title>
+</head>
+<body>
+    <script>
+        const config = {
+            type: Phaser.AUTO,
+            width: 800,
+            height: 600,
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    gravity: { y: 200 }
+                }
+            },
+            scene: Example
+        };
+
+        const game = new Phaser.Game(config);
+    </script>
+</body>
+</html>

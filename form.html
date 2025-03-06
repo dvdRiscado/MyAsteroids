@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @font-face {
+              font-family: 'minecraft';
+              src: local(minecraft), url(../ttf/Minecraft.ttf);
+            }
+          
+            #input-form {
+              display: flex;
+            }
+          
+            #input-textarea {
+              margin-right: 30px;
+              padding: 25px 20px 10px;
+              width: 400px;
+              
+              border: 6px solid white;
+              background-color: #F8F8FF;
+              
+              font-size: 60px;
+              font-family: 'minecraft', sans-serif;
+              color: black;
+            }
+
+            #input-button {
+              padding: 25px 20px 10px;
+              
+              border: 6px solid white;
+              background-color: black;
+
+              font-size: 60px;
+              font-family: 'minecraft', sans-serif;
+              color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="input-form">
+            <input type="text" name="textarea" id="input-textarea" placeholder="Nick" maxLength="3"/>
+            <input type="button" name="button" id="input-button" value="Save" />
+        </div>
+    </body>
+</html>

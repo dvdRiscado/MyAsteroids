@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>NewAsteroids</title>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <script>
+      // Inicializando o Firebase: 
+      /* Está comentádo para não gastar requisições, mas está funcional */
+      firebase.initializeApp({
+        apiKey: "AIzaSyASzj3r-31gfNnE0-umOqV2IRiqDsLSdwQ",
+        authDomain: "newasteroids-d64a0.firebaseapp.com",
+        projectId: "newasteroids-d64a0",
+        storageBucket: "newasteroids-d64a0.appspot.com",
+        messagingSenderId: "333331810626",
+        appId: "1:333331810626:web:e3765cfb8990a7ceffa0db",
+        measurementId: "G-X35J3MTR36"
+      });
+    </script>
+    
+    <script src="lib/3rdParty/phaser.js"></script>
+    <script src="lib/helper.js"></script>
+    <script src="lib/addons.js"></script>
+    <script src="lib/GridLayout.js"></script>
+    <script src="lib/SimpleScene.js"></script>
+    <script src="Scene1.js"></script>
+    <script src="Scene2.js"></script>
+    <script src="Scene3.js"></script>
+    <script src="Scene4.js"></script>
+    <script src="Scene5.js"></script>
+    <script src="Scene6.js"></script>
+    <!--
+    <script src="Scene7.js"></script>
+    -->
+
+    <script src="Scene8.js"></script>
+
+    <script src="main.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+  </head>
+
+  <body>
+
+    <div class="default">
+
+      <h3>Asteroids</h3>
+
+      <div class="JogoEspaco" id="JogoEspaco">
+        <div class="Jogo" id="phaser-div">
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="./firebase.js"> </script> -->
+    
+  </body>
+</html>
