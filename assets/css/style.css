@@ -4,21 +4,11 @@
 }
 
 @font-face {
-  font-family: 'eight-bitOut';
-  src: local(eight-bitOut), url(../ttf/8-bit-Arcade-Out.ttf);
-}
-
-@font-face {
   font-family: 'minecraft';
   src: local(minecraft), url(../ttf/Minecraft.ttf);
 }
 
-@font-face {
-  font-family: 'super-Mario-Bros';
-  src: local(super-Mario-Bros), url(../ttf/Super-Mario-Bros.-2.ttf);
-}
-
-body,figure,img,div,header,nav,main,ul,li,a,p,section,article,h1,h2,footer{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -35,13 +25,18 @@ h3 {
 }
 
 .jogoEspaco {
-  padding: 2px 2px;
+  padding: 0 60px;
   text-align: center;
+  height: 560px;
 }
 
-@media screen and (min-width: 991px){
+.jogo {
+  width: auto;
+  height: auto;
+}
+
+@media screen and (min-width: 981px) {
   .jogoEspaco {
-  padding: 50px 50px;
-  text-align: center;
+    padding: 0 80px;
   }
 }
