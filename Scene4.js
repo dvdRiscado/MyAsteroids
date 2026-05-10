@@ -24,9 +24,7 @@ class Scene4 extends SimpleScene {
       // Carrega as Fontes
       this.loading = this.add.text(450, 150, "", 0xFFFFFF);
       this.loading.setFontFamily('eight-bitIn');
-      this.loading.setFontFamily('eight-bitOut');
       this.loading.setFontFamily('minecraft');
-      this.loading.setFontFamily('super-Mario-Bros');
 
       // Pesquisando Dado - Recorde
       var score = recordes[0];
@@ -40,7 +38,7 @@ class Scene4 extends SimpleScene {
       
       if (this.analise) {
         // Criando Interface - Titulo
-        this.titulo = this.add.text(960, 410, 'NOVO RECORDE').setOrigin(0.5, 1.0).setFontSize(110).setFontFamily('super-Mario-Bros');
+        this.titulo = this.add.text(960, 410, 'NOVO RECORDE').setOrigin(0.5, 1.0).setFontSize(220).setFontFamily('eight-bitIn');
 
         // Criando Interface - Adicionar Nick
         this.nameInput = this.add.dom(960, 480).createFromCache("form").setOrigin(0.5, 0.5);
@@ -53,7 +51,7 @@ class Scene4 extends SimpleScene {
     
       } else {
         // Criando Interface - Titulo
-        this.titulo = this.add.text(960, 410, 'GAME OVER').setOrigin(0.5, 1.0).setFontSize(110).setFontFamily('super-Mario-Bros');
+        this.titulo = this.add.text(960, 410, 'GAME OVER').setOrigin(0.5, 1.0).setFontSize(220).setFontFamily('eight-bitIn');
 
         // Criando Interface - Recorde
         this.recorde = this.add.text(960, 540, pontuacao).setOrigin(0.5, 0.5).setFontSize(60);

@@ -19,9 +19,7 @@ class Scene4 extends SimpleScene {
     // Carrega as Fontes
     this.loading = this.add.text(450, 150, "", 0xFFFFFF);
     this.loading.setFontFamily('eight-bitIn');
-    this.loading.setFontFamily('eight-bitOut');
     this.loading.setFontFamily('minecraft');
-    this.loading.setFontFamily('super-Mario-Bros');
 
     /*
     // Pesquisando Dado - Recorde

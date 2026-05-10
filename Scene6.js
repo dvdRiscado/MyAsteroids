@@ -18,12 +18,10 @@ class Scene6 extends SimpleScene {
       // Carrega as Fontes
       this.loading = this.add.text(450, 150, "", 0xFFFFFF);
       this.loading.setFontFamily('eight-bitIn');
-      this.loading.setFontFamily('eight-bitOut');
       this.loading.setFontFamily('minecraft');
-      this.loading.setFontFamily('super-Mario-Bros');
 
       // Criar Título
-      this.titulo = this.add.text(960, 75, 'SCOREBOARD').setOrigin(0.5, 0.0).setFontSize(100).setFontFamily('super-Mario-Bros');
+      this.titulo = this.add.text(960, 75, 'SCOREBOARD').setOrigin(0.5, 0.0).setFontSize(220).setFontFamily('eight-bitIn');
   
       // Carregando Recordes
       for (var i = 0; i < recordes.length; i++) {
