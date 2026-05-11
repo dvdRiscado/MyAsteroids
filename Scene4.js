@@ -19,7 +19,7 @@ class Scene4 extends SimpleScene {
   
     create() {
 
-      this.drawGrid();
+      // this.drawGrid();
 
       // Carrega as Fontes
       this.loading = this.add.text(450, 150, "", 0xFFFFFF);
@@ -38,7 +38,7 @@ class Scene4 extends SimpleScene {
       
       if (this.analise) {
         // Criando Interface - Titulo
-        this.titulo = this.add.text(960, 410, 'NOVO RECORDE').setOrigin(0.5, 1.0).setFontSize(220).setFontFamily('eight-bitIn');
+        this.titulo = this.add.text(960, 480, 'NEW RECORD').setOrigin(0.5, 1.0).setFontSize(330).setFontFamily('eight-bitIn');
 
         // Criando Interface - Adicionar Nick
         this.nameInput = this.add.dom(960, 480).createFromCache("form").setOrigin(0.5, 0.5);
@@ -51,7 +51,7 @@ class Scene4 extends SimpleScene {
     
       } else {
         // Criando Interface - Titulo
-        this.titulo = this.add.text(960, 410, 'GAME OVER').setOrigin(0.5, 1.0).setFontSize(220).setFontFamily('eight-bitIn');
+        this.titulo = this.add.text(960, 480, 'GAME OVER').setOrigin(0.5, 1.0).setFontSize(330).setFontFamily('eight-bitIn');
 
         // Criando Interface - Recorde
         this.recorde = this.add.text(960, 540, pontuacao).setOrigin(0.5, 0.5).setFontSize(60);
