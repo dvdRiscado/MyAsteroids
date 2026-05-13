@@ -13,12 +13,7 @@
   src: local(minecraft), url(../ttf/Minecraft.ttf);
 }
 
-@font-face {
-  font-family: 'super-Mario-Bros';
-  src: local(super-Mario-Bros), url(../ttf/Super-Mario-Bros.-2.ttf);
-}
-
-body,figure,img,div,header,nav,main,ul,li,a,p,section,article,h1,h2,footer{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -28,10 +23,183 @@ body,figure,img,div,header,nav,main,ul,li,a,p,section,article,h1,h2,footer{
   font-family: 'Roboto', sans-serif;
 }
 
-h3 {
-  font-family: 'eight-bitIn';
-  font-size: 40px;
+@media screen and (min-width: 991px){
+  .jogoEspaco {
+  padding: 50px 50px;
   text-align: center;
+  }
+}
+
+body {
+  background-color: #202C4E;
+  padding: 20px 80px 0;
+}
+
+.fliperama {
+  width: 100%;
+  height: auto;
+}
+
+.marquee-retainers {
+  background-color: #284A94;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.marquee-retainers .marquee {
+  background-color: #1E49C4;
+  width: 100%;
+  height: 120px;
+}
+
+.marquee-retainers .t-molding-left {
+  position: absolute;
+  top: 12px;
+  left: 60px;
+  width: 0;
+  height: 0;
+  border-top: 154px solid #141414;
+  border-left: 48px solid #141414;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.marquee-retainers .t-molding-right {
+  position: absolute;
+  top: 12px;
+  right: 60px;
+  width: 0;
+  height: 0;
+  border-top: 154px solid #141414;
+  border-right: 48px solid #141414;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/*
+.marquee-retainers {
+  background-color: #284A94;
+  width: 920px;
+  padding: 10px 0;
+}
+
+.marquee-retainers .t-molding-left {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  width: 0;
+  height: 0;
+  border-top: 154px solid #141414;
+  border-left: 48px solid #141414;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.marquee-retainers .t-molding-right {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  width: 0;
+  height: 0;
+  border-top: 154px solid #141414;
+  border-right: 48px solid #141414;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.marquee {
+  background-color: #1E49C4;
+  width: 100%;
+  height: 120px;
+}
+
+.speaker-panel {
+  width: 880px; 920 - 860
+  margin: 0 auto;
+
+  border-top: 50px solid #1E346E;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.speaker-panel .t-molding-left.left {
+  position: absolute;
+  top: 162px;
+  left: 16px;
+  width: 0;
+  height: 0;
+  border-top: 4px solid #141414;
+  border-right: 38px solid #141414;
+  border-bottom: 50px solid transparent;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.speaker-panel .t-molding-left.right {
+  position: absolute;
+    top: 132px;
+    left: 53px;
+    width: 0;
+    height: 0;
+    border-top: 84px solid transparent;
+    border-left: 30px solid #141414;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.speaker-panel .t-molding-right.left {
+  position: absolute;
+  top: 162px;
+  right: 16px;
+  width: 0;
+  height: 0;
+  border-top: 4px solid #141414;
+  border-left: 38px solid #141414;
+  border-bottom: 50px solid transparent;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.speaker-panel .t-molding-right.right {
+  position: absolute;
+  top: 132px;
+  right: 53px;
+    width: 0;
+    height: 0;
+    border-top: 84px solid transparent;
+    border-right: 30px solid #141414;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.monitor-bezel {
+  width: 860px;
+  height: 680px;
+  padding-top: 60px;
+  background-color: #28418E;
+  margin: 0 auto;
+}
+
+.monitor-bezel .t-molding-left.left {}
+
+.monitor-bezel .t-molding-left.right {}
+
+.monitor-bezel .t-molding-right.left {}
+
+.monitor-bezel .t-molding-right.right {}
+
+.monitor {
+  width: 760px;
+  height: 540px;
+  background-color: #1C1C1C;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
 .jogoEspaco {
@@ -39,9 +207,10 @@ h3 {
   text-align: center;
 }
 
-@media screen and (min-width: 991px){
-  .jogoEspaco {
-  padding: 50px 50px;
-  text-align: center;
-  }
+.bottom-bezel {
+  width: 900px;
+  height: 30px;
+  margin: 0 auto;
+  background-color: #1E4F9F;
 }
+*/
