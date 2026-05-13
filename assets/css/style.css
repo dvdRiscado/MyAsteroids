@@ -88,6 +88,14 @@ body {
   border-right: 60px solid transparent;
 }
 
+.monitor-bezel {
+  width: 700px;
+  height: 680px;
+  padding: 56px 0 80px;
+  background-color: #28418E;
+  margin: 0 auto;
+}
+
 /*
 .marquee-retainers {
   background-color: #284A94;
