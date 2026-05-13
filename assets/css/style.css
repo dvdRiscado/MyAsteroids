@@ -43,22 +43,23 @@ body {
 .marquee-retainers {
   background-color: #284A94;
   width: 100%;
-  padding: 10px 0;
+  padding: 18px 0;
 }
 
 .marquee-retainers .marquee {
   background-color: #1E49C4;
   width: 100%;
-  height: 120px;
+  height: 150px;
 }
 
 .marquee-retainers .t-molding-left {
+  display: none;
   position: absolute;
   top: 12px;
   left: 60px;
   width: 0;
   height: 0;
-  border-top: 154px solid #141414;
+  border-top: 204px solid #141414;
   border-left: 48px solid #141414;
 
   border-top-left-radius: 5px;
@@ -66,16 +67,25 @@ body {
 }
 
 .marquee-retainers .t-molding-right {
+  display: none;
   position: absolute;
   top: 12px;
   right: 60px;
   width: 0;
   height: 0;
-  border-top: 154px solid #141414;
+  border-top: 204px solid #141414;
   border-right: 48px solid #141414;
 
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+}
+
+.speaker-panel {
+  margin: 0 auto;
+
+  border-top: 84px solid #1E346E;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
 }
 
 /*
