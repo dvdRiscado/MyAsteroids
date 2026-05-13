@@ -32,7 +32,7 @@
 
 body {
   background-color: #202C4E;
-  padding: 20px 80px 0;
+  padding: 20px 80px;
 }
 
 .fliperama {
@@ -105,6 +105,14 @@ body {
 
 .jogoEspaco {
   text-align: center;
+}
+
+.bottom-bezel {
+  margin: 0 auto;
+  width: 740px;
+  border-bottom: 30px solid #1E4F9F;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
 }
 
 /*
