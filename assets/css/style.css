@@ -115,6 +115,13 @@ body {
   border-right: 20px solid transparent;
 }
 
+.control-panel {
+  margin: 0 auto;
+  border-bottom: 136px solid #3364B4;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+}
+
 /*
 .marquee-retainers {
   background-color: #284A94;
