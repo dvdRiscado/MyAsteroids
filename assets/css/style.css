@@ -42,7 +42,7 @@ body {
 
 .marquee-retainers {
   background-color: #284A94;
-  width: 100%;
+  margin: 0 10px;
   padding: 18px 0;
 }
 
@@ -81,11 +81,11 @@ body {
 }
 
 .speaker-panel {
-  margin: 0 auto;
+  margin: 0 10px;
 
   border-top: 84px solid #1E346E;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
 }
 
 .monitor-bezel {
