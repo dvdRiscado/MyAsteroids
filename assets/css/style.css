@@ -117,7 +117,6 @@ body {
   border-left: 20px solid transparent;
   border-bottom: 80px solid #1E1E1E;
 }
-
 .speaker-panel .t-molding-right.right {
   position: absolute;
   top: 212px;
@@ -134,7 +133,7 @@ body {
   margin: 0 auto;
 }
 
-.monitor {
+.monitor-bezel .monitor {
   background-color: #1C1C1C;
   width: 680px;
   height: 392px;
@@ -142,14 +141,51 @@ body {
   margin: 0 auto;
 }
 
-.jogoEspaco {
+.monitor-bezel .monitor .jogoEspaco {
   text-align: center;
 }
+
+.monitor-bezel .t-molding-left.left {
+  position: absolute;
+  top: 290px;
+  left: 60px;
+
+  border-left: 30px solid transparent;
+  border-bottom: 512px solid #1E1E1E;
+}
+
+.monitor-bezel .t-molding-left.right {
+  position: absolute;
+  top: 290px;
+  left: 90px;
+
+  border-top: 512px solid #1E1E1E;
+  border-right: 20px solid #28418E;
+}
+
+.monitor-bezel .t-molding-right.left {
+  position: absolute;
+  top: 290px;
+  right: 90px;
+
+  border-top: 512px solid #1E1E1E;
+  border-left: 20px solid #28418E;
+}
+
+.monitor-bezel .t-molding-right.right {
+  position: absolute;
+  top: 290px;
+  right: 60px;
+
+  border-right: 30px solid transparent;
+  border-bottom: 512px solid #1E1E1E;
+}
+
 
 .bottom-bezel {
   margin: 0 auto;
   width: 830px;
-  border-bottom: 40px solid #1E4F9F;
+  border-bottom: 30px solid #1E4F9F;
   border-left: 24px solid transparent;
   border-right: 24px solid transparent;
 }
