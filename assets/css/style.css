@@ -13,6 +13,11 @@
   src: local(minecraft), url(../ttf/Minecraft.ttf);
 }
 
+@font-face {
+  font-family: 'super-Mario-Bros';
+  src: local(super-Mario-Bros), url(../ttf/Super-Mario-Bros.-2.ttf);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -36,12 +41,13 @@ html, body {
 
 body {
   background-color: #202C4E;
-  padding: 20px 80px;
+  padding: 20px 50px;
 }
 
 .fliperama {
-  width: 100%;
+  width: 882px;
   height: auto;
+  margin: 0 auto;
 }
 
 .marquee-retainers {
@@ -57,29 +63,23 @@ body {
 }
 
 .marquee-retainers .t-molding-left {
-  display: none;
   position: absolute;
-  top: 12px;
-  left: 60px;
-  width: 0;
-  height: 0;
-  border-top: 204px solid #141414;
-  border-left: 48px solid #141414;
-
+  left: 40px;
+  top: 10px;
+  background-color: #1E1E1E;
+  width: 30px;
+  height: 206px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 
 .marquee-retainers .t-molding-right {
-  display: none;
   position: absolute;
-  top: 12px;
-  right: 60px;
-  width: 0;
-  height: 0;
-  border-top: 204px solid #141414;
-  border-right: 48px solid #141414;
-
+  right: 40px;
+  top: 10px;
+  background-color: #1E1E1E;
+  width: 30px;
+  height: 206px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -88,21 +88,21 @@ body {
   margin: 0 10px;
 
   border-top: 84px solid #1E346E;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
 }
 
 .monitor-bezel {
-  width: 700px;
-  padding: 56px 0 80px;
+  width: 782px;
+  padding: 40px 0 80px;
   background-color: #28418E;
   margin: 0 auto;
 }
 
 .monitor {
   background-color: #1C1C1C;
-  width: 630px;
-  height: 355px;
+  width: 680px;
+  height: 392px;
   padding: 14px 0;
   margin: 0 auto;
 }
@@ -113,21 +113,19 @@ body {
 
 .bottom-bezel {
   margin: 0 auto;
-  width: 760px;
-  border-bottom: 30px solid #1E4F9F;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
+  width: 830px;
+  border-bottom: 40px solid #1E4F9F;
+  border-left: 24px solid transparent;
+  border-right: 24px solid transparent;
 }
 
 .control-panel {
-  margin: 0 10px;
   border-bottom: 164px solid #3364B4;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
+  border-left: 26px solid transparent;
+  border-right: 26px solid transparent;
 }
 
 .bottom-control-panel {
-  margin: 0 10px;
   border-top: 70px solid #1E346E;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
@@ -135,7 +133,7 @@ body {
 
 .fliperama-body {
   background-color: #234196;
-  width: 700px;
+  width: 744px;
   padding: 20px 40px 70px;
   margin: 0 auto;
 }
