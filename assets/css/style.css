@@ -278,6 +278,42 @@ body {
   border-right: 10px solid transparent;
 }
 
+.bottom-control-panel .t-molding-left.left {
+  position: absolute;
+  top: 1002px;
+  left: 18px;
+
+  border-top: 72px solid #1E1E1E;
+  border-left: 22px solid transparent;
+}
+
+.bottom-control-panel .t-molding-left.right {
+  position: absolute;
+  top: 1002px;
+  left: 40px;
+  border-left: 22px solid #1E1E1E;
+  border-right: 12px solid transparent;
+  border-bottom: 72px solid #1E1E1E;
+}
+
+.bottom-control-panel .t-molding-right.left {
+  position: absolute;
+  top: 1002px;
+  right: 40px;
+  border-right: 22px solid #1E1E1E;
+  border-left: 12px solid transparent;
+  border-bottom: 72px solid #1E1E1E;
+}
+
+.bottom-control-panel .t-molding-right.right {
+  position: absolute;
+  top: 1002px;
+  right: 18px;
+
+  border-top: 72px solid #1E1E1E;
+  border-right: 22px solid transparent;
+}
+
 .fliperama-body {
   background-color: #234196;
   width: 744px;
