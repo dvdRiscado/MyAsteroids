@@ -185,9 +185,46 @@ body {
 .bottom-bezel {
   margin: 0 auto;
   width: 830px;
-  border-bottom: 30px solid #1E4F9F;
-  border-left: 24px solid transparent;
-  border-right: 24px solid transparent;
+  height: 30px;
+  background-color: #1E4F9F;
+}
+
+.bottom-bezel .t-molding-left.left {
+  position: absolute;
+  top: 800px;
+  left: 38px;
+
+  border-left: 22px solid transparent;
+  border-bottom: 30px solid #1E1E1E;
+}
+
+.bottom-bezel .t-molding-left.right {
+  position: absolute;
+  top: 800px;
+  left: 60px;
+
+  border-top: 30px solid #1E1E1E;
+  border-left: 14px solid #1E1E1E;
+  border-right: 16px solid #1E4F9F;
+}
+
+.bottom-bezel .t-molding-right.left {
+  position: absolute;
+  top: 800px;
+  right: 60px;
+
+  border-top: 30px solid #1E1E1E;
+  border-right: 14px solid #1E1E1E;
+  border-left: 16px solid #1E4F9F;
+}
+
+.bottom-bezel .t-molding-right.right {
+  position: absolute;
+  top: 800px;
+  right: 38px;
+
+  border-right: 22px solid transparent;
+  border-bottom: 30px solid #1E1E1E;
 }
 
 .control-panel {
