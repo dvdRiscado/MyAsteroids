@@ -64,22 +64,22 @@ body {
 
 .marquee-retainers .t-molding-left {
   position: absolute;
-  left: 40px;
+  left: 60px;
   top: 10px;
   background-color: #1E1E1E;
   width: 30px;
-  height: 206px;
+  height: 202px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 
 .marquee-retainers .t-molding-right {
   position: absolute;
-  right: 40px;
+  right: 60px;
   top: 10px;
   background-color: #1E1E1E;
   width: 30px;
-  height: 206px;
+  height: 202px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -90,6 +90,41 @@ body {
   border-top: 84px solid #1E346E;
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
+}
+
+.speaker-panel .t-molding-left.left {
+  position: absolute;
+  top: 212px;
+  left: 60px;
+
+  border-top: 80px solid #1E1E1E;
+  border-left: 30px solid transparent;
+}
+.speaker-panel .t-molding-left.right {
+  position: absolute;
+  top: 212px;
+  left: 90px;
+
+  border-right: 20px solid transparent;
+  border-bottom: 80px solid #1E1E1E;
+}
+
+.speaker-panel .t-molding-right.left {
+  position: absolute;
+  top: 212px;
+  right: 90px;
+
+  border-left: 20px solid transparent;
+  border-bottom: 80px solid #1E1E1E;
+}
+
+.speaker-panel .t-molding-right.right {
+  position: absolute;
+  top: 212px;
+  right: 60px;
+
+  border-top: 80px solid #1E1E1E;
+  border-right: 30px solid transparent;
 }
 
 .monitor-bezel {
