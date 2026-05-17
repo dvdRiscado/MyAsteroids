@@ -252,6 +252,33 @@ body {
   height: 164px; 
 }
 
+.control-panel .panel {
+  width: 716px;
+  display: flex;
+  gap: 100px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.control-panel .panel .joystick {
+  margin-top: -114px;
+  width: 260px;
+  text-align: center;
+}
+
+.control-panel .panel .joystick img {
+  height: 250px;
+}
+
+.control-panel .panel .buttons {
+  margin-top: 10px;
+  width: 260px;
+}
+
+.control-panel .panel .buttons img {
+  height: 140px;
+}
+
 .control-panel .t-molding-left.left {
   position: absolute;
   top: 832px;
