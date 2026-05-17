@@ -62,6 +62,11 @@ body {
   height: 150px;
 }
 
+.marquee-retainers .marquee .title {
+  padding-top: 8px;
+  text-align: center;
+}
+
 .marquee-retainers .t-molding-left {
   position: absolute;
   left: 60px;
