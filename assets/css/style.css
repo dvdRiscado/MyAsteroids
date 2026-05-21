@@ -4,11 +4,6 @@
 }
 
 @font-face {
-  font-family: 'eight-bitOut';
-  src: local(eight-bitOut), url(../ttf/8-bit-Arcade-Out.ttf);
-}
-
-@font-face {
   font-family: 'minecraft';
   src: local(minecraft), url(../ttf/Minecraft.ttf);
 }
@@ -583,8 +578,14 @@ body {
 }
 
 .jogoEspaco {
-  padding: 2px 2px;
+  padding: 0 60px;
   text-align: center;
+  height: 560px;
+}
+
+.jogo {
+  width: auto;
+  height: auto;
 }
 
 .bottom-bezel {

@@ -16,24 +16,54 @@ class Scene3 extends SimpleScene {
   preload() {
 
     // Carregando imagens
-    this.load.image('Nave', 'assets/img/Pixel - Nave.png');
-    this.load.image('Shoot', 'assets/img/Pixel - Tiro.png');
+    this.load.image('Nave', 'assets/img/spaceship.png');
+    this.load.image('Shoot', 'assets/img/spaceship-shoot.png');
     this.load.audio('musica', 'assets/audio/8Bit - We Will Rock You.mp3');
 
-    this.load.image('AsteroidPq', 'assets/img/Esboco - AsteroidPq.png');
-    this.load.image('AsteroidMd', 'assets/img/Esboco - AsteroidMd.png');
-    this.load.image('AsteroidGr', 'assets/img/Esboco - AsteroidGr.png');
+    this.load.image('Asteroid-1-Pq', 'assets/img/asteroid-sprite-1-small.png');
+    this.load.image('Asteroid-1-Md', 'assets/img/asteroid-sprite-1-medium.png');
+    this.load.image('Asteroid-1-Gr', 'assets/img/asteroid-sprite-1-big.png');
 
-    this.load.image('MeteorPq', 'assets/img/Esboco - MeteorPq.png');
-    this.load.image('MeteorMd', 'assets/img/Esboco - MeteorMd.png');
-    this.load.image('MeteorGr', 'assets/img/Esboco - MeteorGr.png');
+    
+    this.load.image('Asteroid-2-Pq', 'assets/img/asteroid-sprite-2-small.png');
+    this.load.image('Asteroid-2-Md', 'assets/img/asteroid-sprite-2-medium.png');
+    this.load.image('Asteroid-2-Gr', 'assets/img/asteroid-sprite-2-big.png');
 
-    this.load.image('CometPq', 'assets/img/Esboco - CometPq.png');
-    this.load.image('CometMd', 'assets/img/Esboco - CometMd.png');
-    this.load.image('CometGr', 'assets/img/Esboco - CometGr.png');
+    
+    this.load.image('Asteroid-3-Pq', 'assets/img/asteroid-sprite-3-small.png');
+    this.load.image('Asteroid-3-Md', 'assets/img/asteroid-sprite-3-medium.png');
+    this.load.image('Asteroid-3-Gr', 'assets/img/asteroid-sprite-3-big.png');
 
-    this.load.image('AlienPq', 'assets/img/Esboco - AlienPq.png');
-    this.load.image('AlienShoot', 'assets/img/Esboco - AlienTiro.png')
+    this.load.image('Meteor-1-Pq', 'assets/img/meteor-sprite-1-small.png');
+    this.load.image('Meteor-1-Md', 'assets/img/meteor-sprite-1-medium.png');
+    this.load.image('Meteor-1-Gr', 'assets/img/meteor-sprite-1-big.png');
+
+    
+    this.load.image('Meteor-2-Pq', 'assets/img/meteor-sprite-2-small.png');
+    this.load.image('Meteor-2-Md', 'assets/img/meteor-sprite-2-medium.png');
+    this.load.image('Meteor-2-Gr', 'assets/img/meteor-sprite-2-big.png');
+
+    
+    this.load.image('Meteor-3-Pq', 'assets/img/meteor-sprite-3-small.png');
+    this.load.image('Meteor-3-Md', 'assets/img/meteor-sprite-3-medium.png');
+    this.load.image('Meteor-3-Gr', 'assets/img/meteor-sprite-3-big.png');
+
+    this.load.image('Comet-1-Pq', 'assets/img/comet-sprite-1-small.png');
+    this.load.image('Comet-1-Md', 'assets/img/comet-sprite-1-medium.png');
+    this.load.image('Comet-1-Gr', 'assets/img/comet-sprite-1-big.png');
+
+    
+    this.load.image('Comet-2-Pq', 'assets/img/comet-sprite-2-small.png');
+    this.load.image('Comet-2-Md', 'assets/img/comet-sprite-2-medium.png');
+    this.load.image('Comet-2-Gr', 'assets/img/comet-sprite-2-big.png');
+
+    
+    this.load.image('Comet-3-Pq', 'assets/img/comet-sprite-3-small.png');
+    this.load.image('Comet-3-Md', 'assets/img/comet-sprite-3-medium.png');
+    this.load.image('Comet-3-Gr', 'assets/img/comet-sprite-3-big.png');
+
+    this.load.image('AlienPq', 'assets/img/alien.png');
+    this.load.image('AlienShoot', 'assets/img/alien-shoot.png')
   }
 
   create() {
@@ -126,7 +156,7 @@ class Scene3 extends SimpleScene {
     */
 
     // Criando a Nave
-    this.nave = this.physics.add.image(960, 510, 'Nave').setOrigin(0.5, 0.5).setScale(2.0);
+    this.nave = this.physics.add.image(960, 510, 'Nave').setOrigin(0.5, 0.5);
     this.nave.angle -= 90;
 
     // Editando propriedades da Nave
@@ -163,7 +193,7 @@ class Scene3 extends SimpleScene {
     for (var i = 0; i < 3; i++) {
       let vida;
 
-      vida = this.add.sprite(((this.vidas.length * 45) + 50), 130, 'Nave').setOrigin(0.0, 0.0).setScale(1.5);
+      vida = this.add.sprite(((this.vidas.length * 45) + 50), 130, 'Nave').setOrigin(0.0, 0.0).setScale(0.7);
       vida.angle -= 90;
 
       this.vidas.push(vida);
@@ -178,8 +208,7 @@ class Scene3 extends SimpleScene {
   fire() {
     let shoot = this.physics.add.sprite(this.nave.x, this.nave.y, 'Shoot');
     this.arrayShoot.push(shoot);
-    shoot.setScale(0.5);
-    shoot.setCircle(10);
+    shoot.setCircle(20);
     shoot.rotation = this.nave.rotation;
     shoot.velocity = 220;
     this.physics.velocityFromRotation(shoot.rotation, shoot.velocity, shoot.body.velocity);
@@ -188,12 +217,13 @@ class Scene3 extends SimpleScene {
   // Criando uma nova função - Asteroide Pequeno
   asteroidPequeno() {
     let y = random(0, 500); // Criando variáveis
+    let sprite = random(1,3);
     let pequeno;
 
     if (random(0, 1) == 0) { // Escolhendo qual lado irá aparecer
-      pequeno = this.physics.add.sprite(this.minX, y, 'AsteroidPq').setScale(1.0); // Criando o Asteroide
+      pequeno = this.physics.add.sprite(this.minX, y, 'Asteroid-' + sprite + '-Pq'); // Criando o Asteroide
     } else {
-      pequeno = this.physics.add.sprite(this.maxX, y, 'AsteroidPq').setScale(1.0); // Criando o Asteroide
+      pequeno = this.physics.add.sprite(this.maxX, y, 'Asteroid-' + sprite + '-Pq'); // Criando o Asteroide
     }
 
     this.arrayAsteroidPeq.push(pequeno); // Colocando Asteroide em uma Matriz
@@ -207,12 +237,13 @@ class Scene3 extends SimpleScene {
   // Criando uma nova função - Asteroide Medio
   asteroidMedio() {
     let y = random(0, 500);
+    let sprite = random(1, 3)
     let medio;
 
     if (random(0, 1) == 0) {
-      medio = this.physics.add.sprite(this.minX, y, 'AsteroidMd').setScale(1.0);
+      medio = this.physics.add.sprite(this.minX, y, 'Asteroid-' + sprite + '-Md');
     } else {
-      medio = this.physics.add.sprite(this.maxX, y, 'AsteroidMd').setScale(1.0);
+      medio = this.physics.add.sprite(this.maxX, y, 'Asteroid-' + sprite + '-Md');
     }
     this.arrayAsteroidMed.push(medio);
     medio.setBounce(1, 1);
@@ -226,12 +257,13 @@ class Scene3 extends SimpleScene {
   // Criando uma nova função - Asteroide Grande
   asteroidGrande() {
     let y = random(0, 500);
+    let sprite = random(1, 3);
     let grande;
 
     if (random(0, 1) == 0) {
-      grande = this.physics.add.sprite(this.minX, y, 'AsteroidGr').setScale(1.0);
+      grande = this.physics.add.sprite(this.minX, y, 'Asteroid-' + sprite + '-Gr');
     } else {
-      grande = this.physics.add.sprite(this.maxX, y, 'AsteroidGr').setScale(1.0);
+      grande = this.physics.add.sprite(this.maxX, y, 'Asteroid-' + sprite + '-Gr');
     }
     this.arrayAsteroidGra.push(grande);
     grande.setBounce(1, 1);
@@ -245,12 +277,13 @@ class Scene3 extends SimpleScene {
   // Criando uma nova função - Meteoro Pequeno
   meteorPequeno() {
     let y = random(0, 500);
+    let sprite = random(1, 3);
     let pequeno;
 
     if (random(0, 1) == 0) {
-      pequeno = this.physics.add.sprite(this.minX, y, 'MeteorPq');
+      pequeno = this.physics.add.sprite(this.minX, y, 'Meteor-' + sprite + '-Pq').setScale(1.2);
     } else {
-      pequeno = this.physics.add.sprite(this.maxX, y, 'MeteorPq');
+      pequeno = this.physics.add.sprite(this.maxX, y, 'Meteor-' + sprite + '-Pq').setScale(1.2);
     }
 
     pequeno.setData('life', random(2, 3));
@@ -265,12 +298,13 @@ class Scene3 extends SimpleScene {
   // Criando uma nova função - Meteoro Medio
   meteorMedio() {
     let y = random(0, 500);
+    let sprite = random(1, 3);
     let medio;
 
     if (random(0, 1) == 0) {
-      medio = this.physics.add.sprite(this.minX, y, 'MeteorMd');
+      medio = this.physics.add.sprite(this.minX, y, 'Meteor-' + sprite + '-Md').setScale(1.2);
     } else {
-      medio = this.physics.add.sprite(this.maxX, y, 'MeteorMd');
+      medio = this.physics.add.sprite(this.maxX, y, 'Meteor-' + sprite + '-Md').setScale(1.2);
     }
 
     medio.setData('life', random(4, 5));
@@ -285,12 +319,13 @@ class Scene3 extends SimpleScene {
   // Criando uma nova função - Meteoro Grande
   meteorGrande() {
     let y = random(0, 500);
+    let sprite = random(1, 3);
     let grande;
 
     if (random(0, 1) == 0) {
-      grande = this.physics.add.sprite(this.minX, y, 'MeteorGr');
+      grande = this.physics.add.sprite(this.minX, y, 'Meteor-' + sprite + '-Gr').setScale(1.2);
     } else {
-      grande = this.physics.add.sprite(this.maxX, y, 'MeteorGr');
+      grande = this.physics.add.sprite(this.maxX, y, 'Meteor-' + sprite + '-Gr').setScale(1.2);
     }
 
     grande.setData('life', random(6, 7));
@@ -305,12 +340,13 @@ class Scene3 extends SimpleScene {
   // Criando uma nova função - Cometa Pequeno
   cometPequeno() {
     let y = random(0, 500);
+    let sprite = random(1, 3);
     let pequeno;
 
     if (random(0, 1) == 0) {
-      pequeno = this.physics.add.sprite(this.minX, y, 'CometPq');
+      pequeno = this.physics.add.sprite(this.minX, y, 'Comet-' + sprite + '-Pq').setScale(0.8);
     } else {
-      pequeno = this.physics.add.sprite(this.maxX, y, 'CometPq');
+      pequeno = this.physics.add.sprite(this.maxX, y, 'Comet-' + sprite + '-Pq').setScale(0.8);
     }
 
     this.arrayCometPeq.push(pequeno);
@@ -323,12 +359,13 @@ class Scene3 extends SimpleScene {
   // Criando uma nova função - Cometa Medio
   cometMedio() {
     let y = random(0, 500);
+    let sprite = random(1, 3);
     let medio;
 
     if (random(0, 1) == 0) {
-      medio = this.physics.add.sprite(this.minX, y, 'CometMd');
+      medio = this.physics.add.sprite(this.minX, y, 'Comet-' + sprite + '-Md').setScale(0.8);
     } else {
-      medio = this.physics.add.sprite(this.maxX, y, 'CometMd');
+      medio = this.physics.add.sprite(this.maxX, y, 'Comet-' + sprite + '-Md').setScale(0.8);
     }
 
     this.arrayCometMed.push(medio);
@@ -341,12 +378,13 @@ class Scene3 extends SimpleScene {
   // Criando uma nova função - Cometa Grande
   cometGrande() {
     let y = random(0, 500);
+    let sprite = random(1, 3);
     let grande;
 
     if (random(0, 1) == 0) {
-      grande = this.physics.add.sprite(this.minX, y, 'CometGr');
+      grande = this.physics.add.sprite(this.minX, y, 'Comet-' + sprite + '-Gr').setScale(0.8);
     } else {
-      grande = this.physics.add.sprite(this.maxX, y, 'CometGr');
+      grande = this.physics.add.sprite(this.maxX, y, 'Comet-' + sprite + '-Gr').setScale(0.8);
     }
 
     this.arrayCometGra.push(grande);
@@ -384,28 +422,28 @@ class Scene3 extends SimpleScene {
     let pequeno;
 
     if (random(0, 1) == 0) {
-      pequeno = this.physics.add.sprite(this.minX, y, 'AlienPq').setOrigin(0.5, 0.5).setScale(2.0);
+      pequeno = this.physics.add.sprite(this.minX, y, 'AlienPq').setOrigin(0.5, 0.5);
     } else {
-      pequeno = this.physics.add.sprite(this.maxX, y, 'AlienPq').setOrigin(0.5, 0.5).setScale(2.0);
+      pequeno = this.physics.add.sprite(this.maxX, y, 'AlienPq').setOrigin(0.5, 0.5);
     }
 
     this.arrayAlienPeq.push(pequeno);
-    pequeno.body.setBounce(1, 1).setMaxSpeed(125);
-    pequeno.angle += random(0, 360);
+    pequeno.body.setBounce(1, 1);
     pequeno.velocity = 125;
-    this.physics.moveTo(pequeno, random(0, 1950), random(0,1080), pequeno.velocity);
-    // this.physics.velocityFromRotation(pequeno.rotation, pequeno.velocity, pequeno.body.velocity);
+    // this.physics.moveTo(pequeno, random(0, 1950), random(0,1080), pequeno.velocity);
+    this.physics.velocityFromRotation(pequeno.rotation, pequeno.velocity, pequeno.body.velocity);
   }
 
   // Criando uma nova função - Asteroide Mega
   asteroidMega() {
     let y = random(0, 500);
+    let sprite = random(1, 3);
     let mega;
 
     if (random(0, 1) == 0) {
-      mega = this.physics.add.sprite((this.minX - 350), y, 'AsteroidGr').setScale(1.5);
+      mega = this.physics.add.sprite((this.minX - 350), y, 'Asteroid-' + sprite + '-Gr').setScale(3);
     } else {
-      mega = this.physics.add.sprite((this.maxX + 350), y, 'AsteroidGr').setScale(1.5);
+      mega = this.physics.add.sprite((this.maxX + 350), y, 'Asteroid-' + sprite + '-Gr').setScale(3);
     }
 
     mega.setData('life', 65);
@@ -424,7 +462,7 @@ class Scene3 extends SimpleScene {
         this.nave.data.values.life += 1;
         let vida;
 
-        vida = this.add.sprite(((this.vidas.length * 45) + 50), 130, 'Nave').setOrigin(0.0, 0.0).setScale(1.5);
+        vida = this.add.sprite(((this.vidas.length * 45) + 50), 130, 'Nave').setOrigin(0.0, 0.0).setScale(0.7);
         vida.angle -= 90;
 
         this.vidas.push(vida);
@@ -473,7 +511,7 @@ class Scene3 extends SimpleScene {
 
     if (this.spawnCometPeq.isUp()){
       for (let ast of this.arrayCometGra) {
-        let pequeno = this.physics.add.sprite(ast.x, ast.y, 'CometPq').setScale(1.0);
+        let pequeno = this.physics.add.sprite(ast.x, ast.y, 'CometPq').setScale(0.8);
         pequeno.body.setBounce(1, 1).setMaxSpeed(200);
 
         this.arrayCometPeq.push(pequeno);
@@ -486,7 +524,7 @@ class Scene3 extends SimpleScene {
 
     if (this.spawnCometMed.isUp()){
       for (let ast of this.arrayCometGra) {
-        let medio = this.physics.add.sprite(ast.x, ast.y, 'CometMd').setScale(1.0);
+        let medio = this.physics.add.sprite(ast.x, ast.y, 'CometMd').setScale(0.8);
 
         this.arrayCometMed.push(medio);
         medio.body.setBounce(1, 1).setMaxSpeed(120);
@@ -506,9 +544,7 @@ class Scene3 extends SimpleScene {
       this.alert.alpha = 0.0;
       this.tempoAlert.pause();
     }
-
-    // angle
-
+    
     /* EM PAUSE
     if(start){
       start = false;
@@ -657,7 +693,7 @@ class Scene3 extends SimpleScene {
           let astNum = random(2, 3);
 
           for (let met = 0; met <= astNum; met++) {
-            let pequeno = this.physics.add.sprite(ast.x, ast.y, 'AsteroidPq').setScale(1.0);
+            let pequeno = this.physics.add.sprite(ast.x, ast.y, 'Asteroid-' + random(1, 3) + '-Pq').setScale(1.2);
 
             this.arrayAsteroidPeq.push(pequeno); // Colocando Asteroide em uma Matriz
             pequeno.angle += random(0, 360); // Editando o ângulo do Asteroide
@@ -685,7 +721,7 @@ class Scene3 extends SimpleScene {
           let astNum = random(1, 2);
 
           for (let met = 0; met <= astNum; met++) {
-            let medio = this.physics.add.sprite(ast.x, ast.y, 'AsteroidMd').setScale(1.0);
+            let medio = this.physics.add.sprite(ast.x, ast.y, 'Asteroid-' + random(1, 3) + '-Md').setScale(1.2);
 
             this.arrayAsteroidMed.push(medio);
             medio.angle += random(0, 360);
@@ -720,7 +756,7 @@ class Scene3 extends SimpleScene {
             let astNum = random(4, 5);
 
             for (let met = 0; met <= astNum; met++) {
-              let grande = this.physics.add.sprite(ast.x, ast.y, 'AsteroidGr');
+              let grande = this.physics.add.sprite(ast.x, ast.y, 'Asteroid-' + random(1, 3) + '-Gr');
 
               this.arrayAsteroidGra.push(grande);
               grande.angle += random(0, 360);
@@ -736,7 +772,7 @@ class Scene3 extends SimpleScene {
             this.nave.data.values.life += 1;
             let vida;
       
-            vida = this.add.sprite(((this.vidas.length * 40) + 100), 130, 'Nave').setScale(1.5);
+            vida = this.add.sprite(((this.vidas.length * 45) + 50), 130, 'Nave').setOrigin(0.0, 0.0).setScale(0.7);
             vida.angle -= 90;
       
             this.vidas.push(vida);
@@ -814,7 +850,7 @@ class Scene3 extends SimpleScene {
             let astNum = random(2, 3);
 
             for (let met = 0; met <= astNum; met++) {
-              let pequeno = this.physics.add.sprite(ast.x, ast.y, 'AsteroidPq').setScale(1.0);
+              let pequeno = this.physics.add.sprite(ast.x, ast.y, 'Asteroid-' + random(1, 3) + '-Pq').setScale(1.0);
   
               this.arrayAsteroidPeq.push(pequeno); // Colocando Asteroide em uma Matriz
               pequeno.angle += random(0, 360); // Editando o ângulo do Asteroide
@@ -852,7 +888,7 @@ class Scene3 extends SimpleScene {
             let astNum = random(1, 2);
 
             for (let met = 0; met <= astNum; met++) {
-              let medio = this.physics.add.sprite(ast.x, ast.y, 'AsteroidMd').setScale(1.0);
+              let medio = this.physics.add.sprite(ast.x, ast.y, 'Asteroid-' + random(1, 3) + '-Md').setScale(1.0);
   
               this.arrayAsteroidMed.push(medio);
               medio.angle += random(0, 360);
@@ -901,7 +937,7 @@ class Scene3 extends SimpleScene {
               let astNum = random(4, 5);
   
               for (let met = 0; met <= astNum; met++) {
-                let grande = this.physics.add.sprite(ast.x, ast.y, 'AsteroidGr');
+                let grande = this.physics.add.sprite(ast.x, ast.y, 'Asteroid-' + random(1, 3) + '-Gr');
   
                 this.arrayAsteroidGra.push(grande);
                 grande.angle += random(0, 360);
@@ -1059,7 +1095,7 @@ class Scene3 extends SimpleScene {
             let astNum = random(1, 3);
 
             for (let met = 0; met <= astNum; met++) {
-              let pequeno = this.physics.add.sprite(ast.x, ast.y, 'MeteorPq').setScale(1.0);
+              let pequeno = this.physics.add.sprite(ast.x, ast.y, 'Meteor-' + random(1, 3) + '-Pq').setScale(1.2);
 
               pequeno.setData('life', random(2, 3));
 
@@ -1114,7 +1150,7 @@ class Scene3 extends SimpleScene {
             let astNum = random(1, 3);
 
             for (let met = 0; met <= astNum; met++) {
-              let pequeno = this.physics.add.sprite(ast.x, ast.y, 'MeteorPq').setScale(1.0);
+              let pequeno = this.physics.add.sprite(ast.x, ast.y, 'Meteor-' + random(1, 3) + '-Pq').setScale(1.0);
 
               pequeno.setData('life', random(2, 3));
 
@@ -1181,7 +1217,7 @@ class Scene3 extends SimpleScene {
               let astNum = random(1, 3);
   
               for (let met = 0; met <= astNum; met++) {
-                let pequeno = this.physics.add.sprite(ast.x, ast.y, 'MeteorPq').setScale(1.0);
+                let pequeno = this.physics.add.sprite(ast.x, ast.y, 'Meteor-' + random(1, 3) + '-Pq').setScale(1.2);
   
                 pequeno.setData('life', random(2, 3));
   
@@ -1232,7 +1268,7 @@ class Scene3 extends SimpleScene {
             let astNum = random(1, 2);
 
             for (let met = 0; met <= astNum; met++) {
-              let medio = this.physics.add.sprite(ast.x, ast.y, 'MeteorMd').setScale(1.0);
+              let medio = this.physics.add.sprite(ast.x, ast.y, 'Meteor-' + random(1, 3) + '-Md').setScale(1.2);
 
               medio.setData('life', random(4, 5));
 
@@ -1287,7 +1323,7 @@ class Scene3 extends SimpleScene {
             let astNum = random(1, 2);
 
             for (let met = 0; met <= astNum; met++) {
-              let medio = this.physics.add.sprite(ast.x, ast.y, 'MeteorMd').setScale(1.0);
+              let medio = this.physics.add.sprite(ast.x, ast.y, 'Meteor-' + random(1, 3) + '-Md').setScale(1.2);
 
               medio.setData('life', random(4, 5));
 
@@ -1353,7 +1389,7 @@ class Scene3 extends SimpleScene {
               let astNum = random(1, 2);
   
               for (let met = 0; met <= astNum; met++) {
-                let medio = this.physics.add.sprite(ast.x, ast.y, 'MeteorMd').setScale(1.0);
+                let medio = this.physics.add.sprite(ast.x, ast.y, 'Meteor-' + random(1, 3) + '-Md').setScale(1.2);
   
                 medio.setData('life', random(4, 5));
   
@@ -1480,7 +1516,7 @@ class Scene3 extends SimpleScene {
           let astNum = random(1, 2);
 
           for (let met = 0; met <= astNum; met++) {
-            let pequeno = this.physics.add.sprite(ast.x, ast.y, 'CometPq').setScale(1.0);
+            let pequeno = this.physics.add.sprite(ast.x, ast.y, 'Comet-' + random(1, 3) + '-Pq').setScale(0.8);
 
             pequeno.body.setBounce(1, 1).setMaxSpeed(200);
 
@@ -1510,7 +1546,7 @@ class Scene3 extends SimpleScene {
           let astNum = random(1, 2);
 
           for (let met = 0; met <= astNum; met++) {
-            let pequeno = this.physics.add.sprite(ast.x, ast.y, 'CometPq').setScale(1.0);
+            let pequeno = this.physics.add.sprite(ast.x, ast.y, 'Comet-' + random(1, 3) + '-Pq').setScale(0.8);
 
             pequeno.body.setBounce(1, 1).setMaxSpeed(200);
 
@@ -1552,7 +1588,7 @@ class Scene3 extends SimpleScene {
             let astNum = random(1, 2);
 
             for (let met = 0; met <= astNum; met++) {
-              let pequeno = this.physics.add.sprite(ast.x, ast.y, 'CometPq').setScale(1.0);
+              let pequeno = this.physics.add.sprite(ast.x, ast.y, 'Comet-' + random(1, 3) + '-Pq').setScale(0.8);
   
               pequeno.body.setBounce(1, 1).setMaxSpeed(200);
   
@@ -1602,7 +1638,7 @@ class Scene3 extends SimpleScene {
             let astNum = random(1, 2);
 
             for (let met = 0; met <= astNum; met++) {
-              let medio = this.physics.add.sprite(ast.x, ast.y, 'CometMd').setScale(1.0);
+              let medio = this.physics.add.sprite(ast.x, ast.y, 'Comet-' + random(1, 3) + '-Md').setScale(0.8);
   
               this.arrayCometMed.push(medio);
               medio.body.setBounce(1, 1).setMaxSpeed(120);
@@ -1634,7 +1670,7 @@ class Scene3 extends SimpleScene {
             let astNum = random(1, 2);
 
             for (let met = 0; met <= astNum; met++) {
-              let medio = this.physics.add.sprite(ast.x, ast.y, 'CometMd').setScale(1.0);
+              let medio = this.physics.add.sprite(ast.x, ast.y, 'Comet-' + random(1, 3) + '-Md').setScale(0.8);
   
               this.arrayCometMed.push(medio);
               medio.body.setBounce(1, 1).setMaxSpeed(120);
@@ -1681,7 +1717,7 @@ class Scene3 extends SimpleScene {
               let astNum = random(1, 2);
   
               for (let met = 0; met <= astNum; met++) {
-                let medio = this.physics.add.sprite(ast.x, ast.y, 'CometMd').setScale(1.0);
+                let medio = this.physics.add.sprite(ast.x, ast.y, 'Comet-' + random(1, 3) + '-Md').setScale(0.8);
     
                 this.arrayCometMed.push(medio);
                 medio.body.setBounce(1, 1).setMaxSpeed(120);
@@ -1763,11 +1799,6 @@ class Scene3 extends SimpleScene {
       }
     }
 
-    // Rotação Alien Pequeno
-    for (let nav of this.arrayAlienPeq) {
-      nav.angle += 5;
-    }
-
     // Criando um Tiro Alien
     if (this.tempoSpawnAlienShoot.isUp()) {
       this.alienFire();
@@ -1789,7 +1820,7 @@ class Scene3 extends SimpleScene {
       }
     }
 
-    // Definindo Colisão - Tiro e Asteroide Pequeno
+    // Definindo Colisão - Tiro e Alien Pequeno
     for (let fir of this.arrayAlienShoot) {
       for (let ast of this.arrayAsteroidPeq) {
         if (fir.intersects(ast, 0.8)) {
@@ -1809,7 +1840,7 @@ class Scene3 extends SimpleScene {
           let astNum = random(2, 3);
 
           for (let met = 0; met <= astNum; met++) {
-            let pequeno = this.physics.add.sprite(ast.x, ast.y, 'AsteroidPq').setScale(1.0);
+            let pequeno = this.physics.add.sprite(ast.x, ast.y, 'Asteroid-' + random(1, 3) + '-Pq');
 
             this.arrayAsteroidPeq.push(pequeno); // Colocando Asteroide em uma Matriz
             pequeno.angle += random(0, 360); // Editando o ângulo do Asteroide
@@ -1834,7 +1865,7 @@ class Scene3 extends SimpleScene {
           let astNum = random(1, 2);
 
           for (let met = 0; met <= astNum; met++) {
-            let medio = this.physics.add.sprite(ast.x, ast.y, 'AsteroidMd').setScale(1.0);
+            let medio = this.physics.add.sprite(ast.x, ast.y, 'Asteroid-' + random(1, 3) + '-Md');
 
             this.arrayAsteroidMed.push(medio);
             medio.angle += random(0, 360);
@@ -1866,7 +1897,7 @@ class Scene3 extends SimpleScene {
             let astNum = random(4, 5);
 
             for (let met = 0; met <= astNum; met++) {
-              let grande = this.physics.add.sprite(ast.x, ast.y, 'AsteroidGr');
+              let grande = this.physics.add.sprite(ast.x, ast.y, 'Asteroid-' + random(1, 3) + '-Gr');
 
               this.arrayAsteroidGra.push(grande);
               grande.angle += random(0, 360);

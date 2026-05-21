@@ -1,13 +1,25 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
   <head>
-    <title>NewAsteroids</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="NewAsteroids é um jogo de tiro multidirecional inspirado no Asteroids de 1979 desenvolvido e publicado pela Atari, Inc. para arcades.">
+
+    <link rel="icon" href="favico.svg" type="xml/svg">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <meta name="og:title" content="NewAsteroids">
+    <meta name="og:description" content="NewAsteroids é um jogo de tiro multidirecional inspirado no Asteroids de 1979 desenvolvido e publicado pela Atari, Inc. para arcades.">
+    <meta name="og:image" content="https://dvdriscado.github.io/myasteroids/favico.svg">
+    <meta name="og:type" content="website">
+    <meta name="og:url" content="https://dvdriscado.github.io/myasteroids">
 
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 
     <script>
-      // Inicializando o Firebase: 
-      /* Está comentádo para não gastar requisições, mas está funcional */
+      // Inicializando o Firebase:
       firebase.initializeApp({
         apiKey: "AIzaSyASzj3r-31gfNnE0-umOqV2IRiqDsLSdwQ",
         authDomain: "newasteroids-d64a0.firebaseapp.com",
@@ -18,7 +30,7 @@
         measurementId: "G-X35J3MTR36"
       });
     </script>
-    
+
     <script src="lib/3rdParty/phaser.js"></script>
     <script src="lib/helper.js"></script>
     <script src="lib/addons.js"></script>
@@ -30,16 +42,11 @@
     <script src="Scene4.js"></script>
     <script src="Scene5.js"></script>
     <script src="Scene6.js"></script>
-    <!--
-    <script src="Scene7.js"></script>
-    -->
-
     <script src="Scene8.js"></script>
 
     <script src="main.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    
+    <title>NewAsteroids</title>
   </head>
 
   <body>
